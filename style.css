@@ -23,44 +23,78 @@ h3 {
     text-align: center;
 }
 
-#rockButton {
-    background-image: url(rock.png);
-    background-color: cadetblue;
-    border: cadetblue;
-    background-size: cover;
-    width: 200px;
-    height: 300px;
+@media only screen and (min-width: 320px) {
+    #rockButton {
+        background-image: url(rock.png);
+        background-color: cadetblue;
+        border: cadetblue;
+        background-size: cover;
+        width: 20px;
+        height: 30px;
+    }
+    
+    #paperButton {
+        background-image: url(paper.png);
+        background-color: cadetblue;
+        border: cadetblue;
+        background-size: cover;
+        width: 20px;
+        height: 30px;
+    }
+    
+    #scissorsButton {
+        background-image: url(scissors.png);
+        background-color: cadetblue;
+        border: cadetblue;
+        background-size: cover;
+        width: 20px;
+        height: 30px;
+    }
+    
+    .buttons {
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 50%);
+    }
 }
 
-#paperButton {
-    background-image: url(paper.png);
-    background-color: cadetblue;
-    border: cadetblue;
-    background-size: cover;
-    width: 200px;
-    height: 300px;
+@media only screen and (min-width: 1025px) {
+    #rockButton {
+        background-image: url(rock.png);
+        background-color: cadetblue;
+        border: cadetblue;
+        background-size: cover;
+        width: 200px;
+        height: 300px;
+    }
+    
+    #paperButton {
+        background-image: url(paper.png);
+        background-color: cadetblue;
+        border: cadetblue;
+        background-size: cover;
+        width: 200px;
+        height: 300px;
+    }
+    
+    #scissorsButton {
+        background-image: url(scissors.png);
+        background-color: cadetblue;
+        border: cadetblue;
+        background-size: cover;
+        width: 200px;
+        height: 300px;
+    }
+    
+    .buttons {
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 50%);
+    }
+    
+    .spacing {
+        padding: 25px;
+    }
 }
-
-#scissorsButton {
-    background-image: url(scissors.png);
-    background-color: cadetblue;
-    border: cadetblue;
-    background-size: cover;
-    width: 200px;
-    height: 300px;
-}
-
-.buttons {
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, 50%);
-}
-
-.spacing {
-    padding: 25px;
-}
-
-
-
-
