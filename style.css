@@ -1,0 +1,66 @@
+* {
+    margin: 5px;
+    padding: 5px;
+}
+
+html {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.scores {
+    text-align: center;
+}
+
+#rockButton {
+    background-image: url(rock.png);
+    background-color: cadetblue;
+    border: cadetblue;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+}
+
+#paperButton {
+    background-image: url(paper.png);
+    background-color: cadetblue;
+    border: cadetblue;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+}
+
+#scissorsButton {
+    background-image: url(scissors.png);
+    background-color: cadetblue;
+    border: cadetblue;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+}
+
+.buttons {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 50%);
+}
+
+.spacing {
+    padding: 25px;
+}
+
+
+
+

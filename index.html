@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rick Papper Scissors</title>
+</head>
+
+<body>
+    <br /><h1>Rock Paper Scissors</h1><br />
+    <br /><h3>Can you beat the computer?</h3><br />
+
+    <br /><br />
+<div class="scores">
+    <div>
+        <h2 id="userScoreLabel" style="display: inline;">You:</h2>
+        <h2 id="userScoreNumber" style="display: inline;">0</h2>
+    </div>
+    <div>
+        <h2 id="computerScore" style="display: inline;">Computer:</h2>
+        <h2 id="computerScoreNumber" style="display: inline;">0</h2>
+    </div>
+</div>
+
+<div class="buttons">
+    <button id="rockButton" style="display: inline;" onClick="rock()"></button>
+    <div class="spacing" style="display: inline;"></div>
+    <button id="paperButton" style="display: inline;" onClick="paper()"></button>
+    <div class="spacing" style="display: inline;"></div>
+    <button id="scissorsButton" style="display: inline;" onClick="scissors()"></button>
+</div>
+
+<br /><br />
+<h3 id="resultsDisplay">Who will win?</h3>
+    
+<script>
+
+var userScore = 0;
+var computerScore = 0;
+
+function rock() {
+        
+    /*Rock = 0, Paper = 1, Scissors = 2*/
+    var RPSlist = [0, 1, 2];
+
+    var computerRPS = RPSlist[Math.floor(Math.random() * RPSlist.length)];
+
+    if (computerRPS === 0) {
+        document.getElementById("resultsDisplay").innerHTML = 'It was a draw. Try again!';
+    }
+    else if (computerRPS === 1) {
+        computerScore++;
+        document.getElementById("resultsDisplay").innerHTML = 'The computer wins this one. Try again!';
+        document.getElementById("computerScoreNumber").innerHTML = computerScore;
+    }
+    else if (computerRPS === 2) {
+        userScore++;
+        document.getElementById("resultsDisplay").innerHTML = 'Congratulations you win!';
+        document.getElementById("userScoreNumber").innerHTML = userScore;
+    }
+
+}
+
+function paper() {
+    
+    /*Rock = 0, Paper = 1, Scissors = 2*/
+    var RPSlist = [0, 1, 2];
+
+    var computerRPS = RPSlist[Math.floor(Math.random() * RPSlist.length)];
+
+    if (computerRPS === 0) {
+        userScore++;
+        document.getElementById("resultsDisplay").innerHTML = 'Congratulations you win!';
+        document.getElementById("userScoreNumber").innerHTML = userScore;
+    }
+    else if (computerRPS === 1) {
+        document.getElementById("resultsDisplay").innerHTML = 'It was a draw. Try again!';
+    }
+    else if (computerRPS === 2) {
+        computerScore++;
+        document.getElementById("resultsDisplay").innerHTML = 'The computer wins this one. Try again!';
+        document.getElementById("computerScoreNumber").innerHTML = computerScore;
+    }
+
+}
+
+function scissors() {
+    
+    /*Rock = 0, Paper = 1, Scissors = 2*/
+    var RPSlist = [0, 1, 2];
+
+    var computerRPS = RPSlist[Math.floor(Math.random() * RPSlist.length)];
+
+    if (computerRPS === 0) {
+        computerScore++;
+        document.getElementById("resultsDisplay").innerHTML = 'The computer wins this one. Try again!';
+        document.getElementById("computerScoreNumber").innerHTML = computerScore;
+    }
+    else if (computerRPS === 1) {
+        userScore++;
+        document.getElementById("resultsDisplay").innerHTML = 'Congratulations you win!';
+        document.getElementById("userScoreNumber").innerHTML = userScore;
+    }
+    else if (computerRPS === 2) {
+        document.getElementById("resultsDisplay").innerHTML = 'It was a draw. Try again!';
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+
